@@ -1,22 +1,24 @@
-# Theme Switcher App
+# Movie Search App
 
-This is a simple React application that demonstrates the use of the Context API for global state management, specifically for toggling between light and dark themes. The application detects the user's preferred color scheme and allows manual toggling of the theme.
+A React-based movie search application that allows users to search for movies using the [TMDb API](https://www.themoviedb.org/). The application displays a list of popular movies by default and lets users search for specific movies by title. The app includes an error boundary to handle unexpected errors gracefully and features a responsive design.
 
 ## Features
 
-- **Automatic Theme Detection**: The app automatically sets the theme to light or dark based on the user's system preferences.
-- **Manual Theme Switching**: Users can switch between light and dark themes using a toggle button.
-- **Persistent Theme State**: The app maintains the current theme state throughout the session.
+- **Search Movies**: Search for movies by title using the search bar.
+- **Popular Movies**: Displays a list of popular movies fetched from the TMDb API.
+- **Error Handling**: An error boundary catches and displays errors without crashing the app.
+- **Responsive Design**: The app is designed to be responsive and user-friendly across various devices.
 
 ## Screenshots
 
-### Dark Mode
+![Screenshot](screenshots/Screenshot.png)
 
-![Dark Mode Screenshot](screenshots/dark-mode-screenshot.png)
+## Technologies Used
 
-### Light Mode
-
-![Light Mode Screenshot](screenshots/light-mode-screenshot.png)
+- **React**: A JavaScript library for building user interfaces.
+- **Axios**: A promise-based HTTP client for making API requests.
+- **TMDb API**: The Movie Database API for fetching movie data.
+- **CSS**: Custom CSS for styling the app components.
 
 ## Getting Started
 
@@ -56,26 +58,23 @@ These instructions will help you set up and run the project locally.
 
 ## Project Structure
 
-- **App.js**: The main entry point of the application. Wraps the `Component` inside the `ThemeProvider` to provide theme context.
-- **components/Component.jsx**: A functional component that consumes the theme context and provides a UI for theme switching.
-- **context/ThemeContext.jsx**: Contains the `ThemeProvider` and `ThemeContext`. Manages the state of the current theme and provides a method to toggle the theme.
-- **App.css**: Basic styling for light and dark themes.
+- **App.js**: The main component that includes the search bar and displays the ListMovie component.
+- **ListMovie.js**: A functional component that fetches and displays movie data from the TMDb API based on user search input.
+- **ErrorBoundary.js**: A class component that catches JavaScript errors anywhere in the child component tree and displays a fallback UI.
+- **App.css**: Contains styles for the application.
 
 ## Usage
 
-- When the application starts, it checks the user's system color scheme preference and sets the initial theme accordingly.
-- Users can toggle between light and dark themes by clicking the button. The current theme is displayed on the screen.
+- Viewing Popular Movies: Upon loading the app, you will see a list of popular movies fetched from the TMDb API.
+- Searching for Movies: Enter a movie title in the search bar and click the "Search" button to find movies matching the entered title.
+- Error Handling: If there is an error fetching data from the API, an error message will be displayed.
 
 ## Built With
 
-- **React**: A JavaScript library for building user interfaces.
-- **React Context API**: For managing and sharing state across the application without prop drilling.
-
-## Potential Improvements
-
-- **Persistent Theme**: Implement local storage to save the user's theme preference even after refreshing the page or reopening the browser.
-- **Smooth Transitions**: Add CSS transitions for a smoother visual change when switching themes.
-- **Additional Components**: Include more components that react to theme changes, such as a navbar or footer.
+- **React**: For building the user interface.
+- **Axios**: For making HTTP requests to the TMDb API.
+- **TMDb API**: For retrieving movie data.
+- **CSS**: For custom styling and responsive design.
 
 ## Contributing
 
@@ -87,4 +86,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 ## Acknowledgments
 
-- Special thanks to the React documentation and community for providing excellent resources and examples.
+- Special thanks to TMDb for providing the movie data API.
