@@ -34,8 +34,8 @@ These instructions will help you set up and run the project locally.
 1. **Clone the repository:**
 
    ```bash
-   git clone https://github.com/RizqiRahcman/ReactContext_Digistar2024.git
-   cd ReactContext_Digistar2024
+   git clone https://github.com/RizqiRahcman/ReactLifecycle_Digistar2024.git
+   cd ReactLifecycle_Digistar2024
    ```
 
 2. **Install the dependencies:**
